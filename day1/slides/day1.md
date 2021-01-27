@@ -72,9 +72,16 @@ is_number = true
 ```rb
 numbers = [1,2,3,4,5]
 puts numbers
+
 ```
 
-#### 繰り返し処理
+```rb
+samleメソッド
+puts numbers.sample
+```
+
+
+#### 繰り返し処理①
 
 ```rb
 numbers = [1,2,3,4,5]
@@ -84,7 +91,13 @@ end
 ```
 
 ---
+#### 繰り返し処理②
 
+```rb
+10.times do
+  puts "hogehoge"
+end
+```
 
 
 #### ハッシュ
@@ -143,8 +156,8 @@ puts bool if bool
 
 ---
 ### 流れ
-- 変数scoreを0にセットしておいて、「ずん」が出るごとにscoreを1ずつ加算していく
-- score = 4、つまり、「ずん」が四回連続で出たらリーチの演出
-- scoreが4でなければ「残念でした」という文字が出力される
+- true,falseを配列に入れてsampleメソッドを使ってtrueが出たら「ずん」が出力して、trueを返すfalseが出たら「どこ」を出力してfalseを返すzun_dokoという関数を作成する
+- 4回目まではif文でzun_dokoの返り値がfalseならhazureという関数を使ってループ終了
+- 「ずん」が四回連続で出たらリーチの演出
 - リーチの時に「どこ」が出ればきよしが出力される
 ---

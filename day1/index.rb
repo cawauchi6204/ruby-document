@@ -19,10 +19,18 @@
 # numbers = [1,2,3,4,5]
 # puts numbers
 
-# 繰り返し処理
+#samleメソッド
+# puts numbers.sample
+
+# 繰り返し処理①
 # numbers = [1,2,3,4,5]
 # numbers.each do|number|
 #   puts number * 100
+# end
+
+#### 繰り返し処理②
+# 10.times do
+#   puts "hogehoge"
 # end
 
 # ハッシュ
@@ -64,63 +72,52 @@
 
 # ズンドコきよしアプリ
 
-def zun_doko
-	if [true, false].sample
-		puts "ずん、"
-		return true #returnはつけてもつけなくてもおk
-	else
-		puts "どこ、"
-		return false
-	end
-end
+# def zun_doko
+# 	if [true, false].sample
+# 		puts 'ずん、'
+# 		return true #returnはつけてもつけなくてもおk
+# 	else
+# 		puts 'どこ、'
+# 		return false
+# 	end
+# end
 
-# リーチ時の演出
-def riichi
-	puts '---------------------'
-	puts '↓↓↓↓↓↓くるか！?↓↓↓↓↓↓↓'
-	puts '---------------------'
-	sleep 1
-end
+# # リーチ時の演出
+# def riichi
+# 	puts '---------------------'
+# 	puts '↓↓↓↓↓↓くるか！?↓↓↓↓↓↓↓'
+# 	puts '---------------------'
+# 	sleep 1
+# end
 
-def hazure
-	puts '🥺🥺🥺🥺🥺🥺🥺🥺🥺🥺'
-	puts 'ダメだった'
-	puts '🥺🥺🥺🥺🥺🥺🥺🥺🥺🥺'
-end
+# def hazure
+# 	puts '🥺🥺🥺🥺🥺🥺🥺🥺🥺🥺'
+# 	puts 'ダメだった'
+# 	puts '🥺🥺🥺🥺🥺🥺🥺🥺🥺🥺'
+# end
 
-# ズンドコきよし開始
-def start
-	score = 0
+# # ズンドコきよし開始
+# def start
+# 	puts '---------------------'
+# 	puts 'START!!!!!'
+# 	puts '---------------------'
 
-	puts '---------------------'
-	puts 'START!!!!!'
-	puts '---------------------'
+# 	4.times do
+# 		return hazure if !zun_doko
+# 	end
 
-	4.times do
-		if zun_doko
-			score += 1
-		else
-      return hazure
-		end
-	end
+# 	riichi
 
-	if score == 4
-		#普通の書き方
-		riichi
-	end
+# 	if !zun_doko
+# 		sleep 1
+# 		puts '🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆'
+# 		puts 'キ・ヨ・シ！！！！！！'
+# 		puts '🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆'
+# 	else
+# 		sleep 1
+# 		hazure
+# 	end
+# end
 
-  # riichi if score == 4 #便利な書き方
-
-	if !zun_doko && score == 4
-		sleep 1
-		puts '🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆'
-		puts 'キ・ヨ・シ！！！！！！'
-		puts '🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆🎆'
-  else
-    sleep 1
-		hazure
-	end
-end
-
-start
-# 10.times { start }
+# start
+# # 10.times { start }
